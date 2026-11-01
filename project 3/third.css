@@ -1,0 +1,417 @@
+:root {
+  --ink: #182230;
+  --muted: #697586;
+  --brand: #176b5b;
+  --brand-dark: #105346;
+  --surface: #ffffff;
+  --background: #f4f7f6;
+  --border: #e2e8e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--background);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px max(5%, calc((100% - 1100px) / 2));
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  color: var(--brand);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 54px 0 32px;
+}
+
+.hero h1 {
+  margin: 6px 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -0.04em;
+}
+
+.hero > p:last-child {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.panel,
+.trip-card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgb(24 34 48 / 4%);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #9bd5c7;
+  border-color: var(--brand);
+}
+
+.optional {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+button {
+  min-height: 44px;
+  padding: 10px 18px;
+  color: white;
+  background: var(--brand);
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--brand-dark);
+}
+
+.search-form button {
+  align-self: end;
+}
+
+.results {
+  padding: 40px 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 4px 0 0;
+}
+
+.sort-control {
+  display: flex;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-list {
+  display: grid;
+  gap: 16px;
+}
+
+.trip-card {
+  padding: 20px;
+}
+
+.trip-main {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  background: #e8f4f0;
+  border-radius: 12px;
+  font-size: 1.4rem;
+}
+
+.service h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.service p,
+.route span,
+.fare span,
+.trip-footer {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: center;
+}
+
+.route div:not(.route-line) {
+  display: grid;
+  gap: 3px;
+}
+
+.route-line {
+  position: relative;
+  flex: 1;
+  border-top: 1px dashed #aebbb5;
+}
+
+.route-line span {
+  position: relative;
+  top: -14px;
+  padding: 0 6px;
+  background: white;
+  white-space: nowrap;
+}
+
+.fare {
+  display: grid;
+  text-align: right;
+}
+
+.fare strong {
+  font-size: 1.35rem;
+}
+
+.trip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.seat-layout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.seat {
+  padding: 5px 8px;
+  color: var(--brand-dark);
+  background: #e5f3ee;
+  border: 1px solid #b8d9cc;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+.seat.taken {
+  color: #7b8794;
+  background: #edf0f2;
+  border-color: #d9dee2;
+}
+
+.seat-legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.seat-legend i {
+  width: 8px;
+  height: 8px;
+  background: #78b99e;
+  border-radius: 50%;
+}
+
+.seat-legend .taken-dot {
+  background: #aeb7bf;
+}
+
+.passenger-panel {
+  margin-bottom: 20px;
+}
+
+.passenger-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.passenger-form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.fare-panel {
+  max-width: 420px;
+  margin-bottom: 48px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px 0;
+  text-align: left;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+tr + tr {
+  border-top: 1px solid var(--border);
+}
+
+.total {
+  font-size: 1.05rem;
+}
+
+footer {
+  padding: 22px 5%;
+  color: var(--muted);
+  background: white;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .search-form,
+  .passenger-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip-main {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .fare {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .search-form,
+  .passenger-form,
+  .trip-main {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .route {
+    gap: 8px;
+  }
+
+  .trip-footer {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .seat-layout {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripLine | Book travel</title>
+  <link rel="stylesheet" href="third.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">TripLine</a>
+    <nav aria-label="Main navigation">
+      <a href="#search">Search trips</a>
+      <a href="#results">Available services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">PLAN YOUR NEXT JOURNEY</p>
+      <h1>Where would you like to go?</h1>
+      <p>Compare bus and train services, fares, and seats in one place.</p>
+    </section>
+
+    <section class="panel" id="search" aria-labelledby="search-title">
+      <h2 id="search-title">Find your trip</h2>
+
+      <form class="search-form">
+        <label>
+          Travel by
+          <select name="travel-type">
+            <option>Bus</option>
+            <option>Train</option>
+          </select>
+        </label>
+
+        <label>
+          From
+          <input type="text" name="source" placeholder="Source city" required>
+        </label>
+
+        <label>
+          To
+          <input type="text" name="destination" placeholder="Destination city" required>
+        </label>
+
+        <label>
+          Departure
+          <input type="date" name="departure" required>
+        </label>
+
+        <label>
+          Return <span class="optional">(optional)</span>
+          <input type="date" name="return">
+        </label>
+
+        <label>
+          Passengers
+          <select name="passengers">
+            <option>1 passenger</option>
+            <option>2 passengers</option>
+            <option>3 passengers</option>
+            <option>4 passengers</option>
+          </select>
+        </label>
+
+        <button type="submit">Search trips</button>
+      </form>
+    </section>
+
+    <section class="results" id="results" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR OPTIONS</p>
+          <h2 id="results-title">Available services</h2>
+        </div>
+        <label class="sort-control">
+          Sort by
+          <select>
+            <option>Recommended</option>
+            <option>Lowest fare</option>
+            <option>Earliest departure</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="trip-list">
+        <article class="trip-card">
+          <div class="trip-main">
+            <div class="service">
+              <span class="service-icon" aria-hidden="true">🚌</span>
+              <div>
+                <h3>CityLink Express</h3>
+                <p>AC sleeper · Direct</p>
+              </div>
+            </div>
+
+            <div class="route">
+              <div><strong>08:30</strong><span>Central Station</span></div>
+              <div class="route-line"><span>6h 15m</span></div>
+              <div><strong>14:45</strong><span>Riverside Terminal</span></div>
+            </div>
+
+            <div class="fare">
+              <span>From</span>
+              <strong>₹850</strong>
+              <span>per passenger</span>
+            </div>
+          </div>
+
+          <div class="trip-footer">
+            <span>12 seats available</span>
+            <button type="button">Select seats</button>
+          </div>
+
+          <div class="seat-layout" aria-label="Seat selection example">
+            <span class="seat available">1A</span>
+            <span class="seat available">1B</span>
+            <span class="seat taken">1C</span>
+            <span class="seat available">1D</span>
+            <span class="seat-legend"><i></i> Available</span>
+            <span class="seat-legend"><i class="taken-dot"></i> Taken</span>
+          </div>
+        </article>
+
+        <article class="trip-card">
+          <div class="trip-main">
+            <div class="service">
+              <span class="service-icon" aria-hidden="true">🚆</span>
+              <div>
+                <h3>Intercity Rail</h3>
+                <p>AC chair car · Direct</p>
+              </div>
+            </div>
+
+            <div class="route">
+              <div><strong>10:10</strong><span>Central Station</span></div>
+              <div class="route-line"><span>5h 40m</span></div>
+              <div><strong>15:50</strong><span>Riverside Station</span></div>
+            </div>
+
+            <div class="fare">
+              <span>From</span>
+              <strong>₹1,200</strong>
+              <span>per passenger</span>
+            </div>
+          </div>
+
+          <div class="trip-footer">
+            <span>8 seats available</span>
+            <button type="button">Select seats</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel passenger-panel" aria-labelledby="passenger-title">
+      <h2 id="passenger-title">Passenger details</h2>
+      <form class="passenger-form">
+        <label>
+          Full name
+          <input type="text" name="name" placeholder="Passenger name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com">
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" placeholder="+91 00000 00000">
+        </label>
+        <button type="button">Continue to payment</button>
+      </form>
+    </section>
+
+    <section class="panel fare-panel" aria-labelledby="fare-title">
+      <h2 id="fare-title">Fare summary</h2>
+      <table>
+        <tbody>
+          <tr><td>Ticket fare</td><td>₹850</td></tr>
+          <tr><td>Service fee</td><td>₹40</td></tr>
+          <tr class="total"><th>Total</th><th>₹890</th></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>TripLine · Travel made simple</p>
+  </footer>
+</body>
+</html>

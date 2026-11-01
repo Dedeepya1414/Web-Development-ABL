@@ -1,0 +1,264 @@
+:root {
+  --cream: #fff8ef;
+  --pink: #e9a7a0;
+  --rose: #9f4f53;
+  --brown: #49342d;
+  --muted: #76675f;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8%;
+  background: var(--white);
+}
+
+.logo {
+  color: var(--rose);
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a,
+.contact-details a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+nav a:hover,
+.contact-details a:hover {
+  color: var(--rose);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  padding: 64px 8%;
+  background:
+    linear-gradient(90deg, rgba(40, 25, 20, 0.7), rgba(40, 25, 20, 0.12)),
+    url("https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1800&q=85")
+    center / cover;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  margin: 8px 0 14px;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.08;
+}
+
+.eyebrow {
+  color: var(--rose);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #ffe0cc;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background: var(--rose);
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #813e43;
+}
+
+.section {
+  padding: 64px 8%;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.section-heading h2,
+.custom-copy h2,
+.offer-section h2 {
+  margin: 4px 0 10px;
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 5px 18px rgba(73, 52, 45, 0.09);
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px 18px 20px;
+}
+
+.product-info h3 {
+  margin: 0 0 6px;
+  font-family: Georgia, serif;
+}
+
+.product-info p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.price,
+.starting-price {
+  color: var(--rose);
+  font-weight: bold;
+}
+
+.custom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #f4e4d7;
+}
+
+.custom-image {
+  min-height: 330px;
+  border-radius: 10px;
+  background: url("https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1000&q=85")
+    center / cover;
+}
+
+.custom-copy {
+  max-width: 520px;
+}
+
+.custom-copy p {
+  color: var(--muted);
+}
+
+.custom-copy .starting-price {
+  color: var(--rose);
+}
+
+.offer-section {
+  padding: 52px 8%;
+  background: var(--rose);
+  color: var(--white);
+  text-align: center;
+}
+
+.offer-section .eyebrow {
+  color: #ffe0cc;
+}
+
+.offer-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--rose);
+}
+
+.button-light:hover {
+  background: var(--cream);
+}
+
+.contact-details {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+footer {
+  padding: 18px;
+  background: var(--brown);
+  color: var(--white);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-section {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-image {
+    min-height: 250px;
+  }
+}

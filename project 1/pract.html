@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Academic Dashboard</title>
+  <link rel="stylesheet", href="sample.css">
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h2>Campus Portal</h2>
+      <a class="active" href="#">Dashboard</a>
+      <a href="#">My Profile</a>
+      <a href="#">Results</a>
+      <a href="#">Attendance</a>
+      <a href="#">Examinations</a>
+      <a href="#">Announcements</a>
+    </aside>
+
+    <main>
+      <header>
+        <h1>Student Dashboard</h1>
+        <span>Welcome, Alex Morgan</span>
+      </header>
+
+      <section class="cards">
+        <article class="card">
+          <div class="value">STU-2024-018</div>
+          <p>Student ID</p>
+        </article>
+        <article class="card">
+          <div class="value">Computer Science</div>
+          <p>Program · Semester 4</p>
+        </article>
+        <article class="card">
+          <div class="value">3.72</div>
+          <p>Current GPA</p>
+        </article>
+        <article class="card">
+          <div class="value">89%</div>
+          <p>Overall Attendance</p>
+        </article>
+      </section>
+
+      <div class="columns">
+        <div>
+          <section class="panel">
+            <h2>Semester Results</h2>
+            <table>
+              <thead>
+                <tr><th>Subject</th><th>Grade</th><th>Credits</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Data Structures</td><td>A</td><td>4</td></tr>
+                <tr><td>Database Systems</td><td>A-</td><td>3</td></tr>
+                <tr><td>Operating Systems</td><td>B+</td><td>4</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="panel">
+            <h2>Subject Attendance</h2>
+            <p>Data Structures — 92%</p>
+            <progress value="92" max="100"></progress>
+            <p>Database Systems — 85%</p>
+            <progress value="85" max="100"></progress>
+            <p>Operating Systems — 78%</p>
+            <progress value="78" max="100"></progress>
+          </section>
+        </div>
+
+        <div>
+          <section class="panel">
+            <h2>Examination Schedule</h2>
+            <table>
+              <thead>
+                <tr><th>Subject</th><th>Date</th><th>Time</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Data Structures</td><td>Nov 12</td><td>9:00 AM</td></tr>
+                <tr><td>Database Systems</td><td>Nov 15</td><td>1:00 PM</td></tr>
+                <tr><td>Operating Systems</td><td>Nov 19</td><td>9:00 AM</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="panel">
+            <h2>Announcements</h2>
+            <div class="notice">Library hours extended during exam week.</div>
+            <div class="notice">Course registration opens on November 20.</div>
+            <div class="notice">Check the student portal for updated exam venues.</div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
